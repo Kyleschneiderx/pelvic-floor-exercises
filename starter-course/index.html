@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelvic Wellness Exercises | Starter Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #FBF8F4;
+            --cream-dark: #F0EBE3;
+            --warm-white: #FFFCF9;
+            --terracotta: #C4836A;
+            --terracotta-dark: #A66B53;
+            --terracotta-light: #D9A990;
+            --sage: #8B9D83;
+            --sage-dark: #6E8166;
+            --sage-light: #B5C4AF;
+            --charcoal: #2D2926;
+            --warm-gray: #6B5E57;
+            --light-warm-gray: #A89B94;
+            --blush: #E8CFC0;
+            --gold: #C9A96E;
+            --gradient: linear-gradient(135deg, #C4836A 0%, #D9A990 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--charcoal);
+            line-height: 1.7;
+            background: var(--warm-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.015;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        a, button {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Top Banner */
+        .timer-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--charcoal);
+            color: white;
+            padding: 12px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 20px rgba(45, 41, 38, 0.3);
+        }
+
+        .timer-banner p {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .timer-banner .highlight {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 8px;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-align: center;
+            min-width: 50px;
+        }
+
+        .countdown-item span {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .countdown-item small {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+
+        .timer-cta {
+            background: var(--terracotta);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .timer-cta:hover {
+            background: var(--terracotta-dark);
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 20px 80px;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--warm-white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(196, 131, 106, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--blush);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--terracotta-dark);
+            margin-bottom: 24px;
+        }
+
+        .badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garant', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            color: var(--charcoal);
+        }
+
+        h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--warm-gray);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding: 24px 0;
+            border-top: 1px solid rgba(196, 131, 106, 0.15);
+            border-bottom: 1px solid rgba(196, 131, 106, 0.15);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--terracotta);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--warm-gray);
+            margin-top: 4px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(196, 131, 106, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(196, 131, 106, 0.4);
+        }
+
+        .btn-primary svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .price-tag {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--warm-gray);
+            font-size: 1rem;
+        }
+
+        .sale-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--terracotta);
+        }
+
+        .savings {
+            background: rgba(139, 157, 131, 0.15);
+            color: var(--sage-dark);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 25px 80px rgba(196, 131, 106, 0.12);
+            position: relative;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient);
+            border-radius: 26px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .course-preview {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .course-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .course-preview .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .course-preview:hover .play-overlay {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .course-preview .play-overlay svg {
+            width: 28px;
+            height: 28px;
+            color: var(--terracotta);
+            margin-left: 4px;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .meta-item {
+            flex: 1;
+            background: var(--cream);
+            padding: 14px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .meta-item svg {
+            width: 22px;
+            height: 22px;
+            color: var(--terracotta);
+            margin-bottom: 6px;
+        }
+
+        .meta-item p {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--charcoal);
+        }
+
+        .meta-item small {
+            color: var(--warm-gray);
+            font-size: 0.7rem;
+        }
+
+        /* What You'll Learn */
+        .learn-section {
+            padding: 80px 20px;
+            background: var(--warm-white);
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(196, 131, 106, 0.1);
+            color: var(--terracotta);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garant', serif;
+            font-size: 2.3rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--charcoal);
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--warm-gray);
+            line-height: 1.7;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .learn-card {
+            background: white;
+            border: 1px solid var(--cream-dark);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .learn-card:hover {
+            border-color: var(--terracotta-light);
+            box-shadow: 0 10px 40px rgba(196, 131, 106, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .learn-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .learn-icon svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+
+        .learn-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--charcoal);
+        }
+
+        .learn-card p {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Instructor Section */
+        .instructor-section {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--warm-white) 100%);
+        }
+
+        .instructor-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            padding: 40px;
+            box-shadow: 0 15px 50px rgba(196, 131, 106, 0.1);
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .instructor-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 10px 30px rgba(196, 131, 106, 0.2);
+        }
+
+        .instructor-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instructor-info h3 {
+            font-family: 'Cormorant Garant', serif;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .instructor-title {
+            color: var(--terracotta);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .instructor-bio {
+            color: var(--warm-gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .credentials-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .credential-tag {
+            background: var(--cream-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1C1917 100%);
+            color: white;
+        }
+
+        .pricing-section .section-label {
+            background: rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.9);
+        }
+
+        .pricing-section h2 {
+            color: white;
+        }
+
+        .pricing-section .section-desc {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .pricing-card {
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 8px 45px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transform: rotate(45deg);
+        }
+
+        .pricing-card h3 {
+            font-family: 'Cormorant Garant', serif;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+
+        .pricing-card > p {
+            color: var(--warm-gray);
+            margin-bottom: 24px;
+        }
+
+        .pricing-price {
+            padding: 24px 0;
+            border-top: 1px solid var(--cream-dark);
+            border-bottom: 1px solid var(--cream-dark);
+            margin-bottom: 24px;
+        }
+
+        .pricing-original {
+            font-size: 1.3rem;
+            color: var(--warm-gray);
+            text-decoration: line-through;
+        }
+
+        .pricing-current {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--terracotta);
+            line-height: 1;
+        }
+
+        .pricing-current sup {
+            font-size: 1.8rem;
+            vertical-align: super;
+        }
+
+        .pricing-savings {
+            display: inline-block;
+            background: rgba(139, 157, 131, 0.15);
+            color: var(--sage-dark);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 12px;
+        }
+
+        .pricing-features {
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--cream);
+        }
+
+        .pricing-feature:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-feature svg {
+            width: 18px;
+            height: 18px;
+            color: var(--sage);
+            flex-shrink: 0;
+        }
+
+        .pricing-feature span {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+        }
+
+        .pricing-cta {
+            display: block;
+            width: 100%;
+            background: var(--gradient);
+            color: white;
+            padding: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(196, 131, 106, 0.3);
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(196, 131, 106, 0.4);
+        }
+
+        .urgency-note {
+            margin-top: 16px;
+            color: var(--sage);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .urgency-note svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--charcoal) 0%, #1C1917 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .final-cta p {
+            color: rgba(255,255,255,0.7);
+            max-width: 550px;
+            margin: 0 auto 32px;
+            font-size: 1.05rem;
+        }
+
+        .final-cta .btn-primary {
+            font-size: 1.15rem;
+            padding: 18px 40px;
+        }
+
+        .final-price {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .final-price .original {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        .final-price .current {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #241F1D;
+            color: rgba(255,255,255,0.6);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero-visual {
+                order: -1;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .learn-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .instructor-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .credentials-row {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timer-banner {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 10px 12px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .timer-banner p {
+                font-size: 0.75rem;
+                width: 100%;
+            }
+
+            .countdown {
+                gap: 4px;
+            }
+
+            .countdown-item {
+                padding: 4px 8px;
+                min-width: 38px;
+            }
+
+            .countdown-item span {
+                font-size: 0.95rem;
+            }
+
+            .countdown-item small {
+                font-size: 0.55rem;
+            }
+
+            .timer-cta {
+                padding: 6px 14px;
+                font-size: 0.75rem;
+            }
+
+            .hero {
+                padding: 95px 16px 50px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+                line-height: 1.2;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .badge {
+                font-size: 0.7rem;
+                padding: 6px 12px;
+                margin-bottom: 16px;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-stats {
+                gap: 16px;
+                padding: 16px 0;
+                margin-bottom: 24px;
+            }
+
+            .stat-number {
+                font-size: 1.3rem;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+
+            .hero-cta {
+                gap: 12px;
+            }
+
+            .btn-primary {
+                padding: 14px 24px;
+                font-size: 1rem;
+            }
+
+            .price-tag {
+                padding: 12px 16px;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .sale-price {
+                font-size: 1.8rem;
+            }
+
+            .original-price {
+                font-size: 0.9rem;
+            }
+
+            .savings {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+
+            .hero-visual {
+                max-width: 100%;
+            }
+
+            .hero-card {
+                padding: 16px;
+            }
+
+            .course-preview .play-overlay {
+                width: 55px;
+                height: 55px;
+            }
+
+            .course-preview .play-overlay svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .course-meta {
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            .meta-item {
+                padding: 10px 8px;
+            }
+
+            .meta-item svg {
+                width: 18px;
+                height: 18px;
+                margin-bottom: 4px;
+            }
+
+            .meta-item p {
+                font-size: 0.75rem;
+            }
+
+            .meta-item small {
+                font-size: 0.6rem;
+            }
+
+            .section-header {
+                margin-bottom: 30px;
+            }
+
+            .section-label {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+                margin-bottom: 12px;
+            }
+
+            .section-desc {
+                font-size: 0.95rem;
+            }
+
+            .learn-section,
+            .instructor-section,
+            .pricing-section,
+            .final-cta {
+                padding: 50px 16px;
+            }
+
+            .learn-card {
+                padding: 18px;
+                gap: 14px;
+            }
+
+            .learn-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .learn-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .learn-card h3 {
+                font-size: 0.95rem;
+            }
+
+            .learn-card p {
+                font-size: 0.85rem;
+            }
+
+            .instructor-card {
+                padding: 24px 20px;
+                gap: 20px;
+            }
+
+            .instructor-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .instructor-info h3 {
+                font-size: 1.3rem;
+            }
+
+            .instructor-title {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+
+            .instructor-bio {
+                font-size: 0.9rem;
+                margin-bottom: 16px;
+            }
+
+            .credential-tag {
+                font-size: 0.7rem;
+                padding: 5px 10px;
+            }
+
+            .pricing-card {
+                padding: 28px 20px;
+            }
+
+            .pricing-badge {
+                font-size: 0.65rem;
+                padding: 6px 40px;
+                right: -38px;
+                top: 16px;
+            }
+
+            .pricing-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .pricing-price {
+                padding: 20px 0;
+            }
+
+            .pricing-original {
+                font-size: 1.1rem;
+            }
+
+            .pricing-current {
+                font-size: 2.8rem;
+            }
+
+            .pricing-current sup {
+                font-size: 1.4rem;
+            }
+
+            .pricing-savings {
+                font-size: 0.75rem;
+                padding: 5px 12px;
+            }
+
+            .pricing-feature {
+                padding: 8px 0;
+            }
+
+            .pricing-feature span {
+                font-size: 0.85rem;
+            }
+
+            .pricing-cta {
+                padding: 16px;
+                font-size: 1rem;
+            }
+
+            .urgency-note {
+                font-size: 0.8rem;
+            }
+
+            .final-cta h2 {
+                font-size: 1.4rem;
+            }
+
+            .final-cta p {
+                font-size: 0.95rem;
+                margin-bottom: 24px;
+            }
+
+            .final-cta .btn-primary {
+                padding: 16px 28px;
+                font-size: 1rem;
+            }
+
+            .final-price {
+                font-size: 0.9rem;
+                margin-top: 16px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero {
+                padding: 90px 12px 40px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+            }
+
+            .hero-stats {
+                gap: 12px;
+            }
+
+            .stat-number {
+                font-size: 1.15rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .price-tag {
+                justify-content: center;
+            }
+
+            .btn-primary {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .course-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .meta-item {
+                padding: 12px;
+            }
+
+            .meta-item p {
+                font-size: 0.8rem;
+            }
+
+            .learn-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .learn-icon {
+                margin: 0 auto;
+            }
+
+            .pricing-current {
+                font-size: 2.5rem;
+            }
+
+            .credentials-row {
+                gap: 8px;
+            }
+        }
+    </style>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PWML8QD');
+    </script>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="timer-banner">
+        <p><span class="highlight">NEW CLASS</span> Pelvic Wellness Exercises — Starter Course</p>
+        <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3678297?price_id=4624240&coupon=starter" class="timer-cta cta-checkout" data-cta-location="timer_banner">Get Instant Access — $39</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                    </svg>
+                    40+ Years Pelvic Floor Expertise
+                </div>
+                <h1>Master Your <span>Pelvic Floor</span> in One Powerful Class</h1>
+                <p class="hero-subtitle">Learn the exact exercises and techniques a 40-year pelvic floor specialist uses with her patients — all in one comprehensive, follow-along video class.</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">1+ Hr</div>
+                        <div class="stat-label">Video Class</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Exercises</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Years Expertise</div>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3678297?price_id=4624240&coupon=starter" class="btn-primary cta-checkout" data-cta-location="hero_section">
+                        Get Instant Access
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <div class="price-tag">
+                        <span class="sale-price">$39</span>
+                        <span class="savings">Lifetime Access</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3678297?price_id=4624240&coupon=starter" class="course-preview cta-checkout" data-cta-location="video_preview">
+                        <img src="preview-image.png" alt="Pelvic Wellness Exercises - Starter Class Preview">
+                        <div class="play-overlay">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <p>1+ Hour</p>
+                            <small>Follow Along</small>
+                        </div>
+                        <div class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                            </svg>
+                            <p>HD Video</p>
+                            <small>Stream Anytime</small>
+                        </div>
+                        <div class="meta-item">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                            <p>Lifetime</p>
+                            <small>Access</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="learn-section reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">What You'll Learn</span>
+                <h2>A Complete Pelvic Floor Workout</h2>
+                <p class="section-desc">Everything you need to strengthen, relax, and take control of your pelvic floor — in one comprehensive class.</p>
+            </div>
+            <div class="learn-grid">
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Pelvic Floor Contractions</h3>
+                        <p>Learn the 5 different muscle cues — stop the flow, perineal body, clitoral nod, anal sphincter — so your brain reconnects with each muscle.</p>
+                    </div>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Core Activation</h3>
+                        <p>Engage your deep abdominal muscles (transverse abdominis) that work together with your pelvic floor for true core stability.</p>
+                    </div>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Hip Rotator Exercises</h3>
+                        <p>Strengthen the hip rotator cuff — a muscle that sits IN the pelvic floor and is essential for pelvic stability.</p>
+                    </div>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Bridge & Glute Work</h3>
+                        <p>Single-leg bridges, glute activation, and exercises that build the endurance your pelvic floor needs throughout the day.</p>
+                    </div>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Stretches & Relaxation</h3>
+                        <p>Essential stretches for tight hip flexors, QL, and the pelvic floor itself — because a tight floor can't function properly.</p>
+                    </div>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Breath Work</h3>
+                        <p>Learn diaphragmatic breathing that works with your pelvic floor like a piston — essential for pressure management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="instructor-section reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Your Instructor</span>
+                <h2>Learn From a Leading Expert</h2>
+            </div>
+            <div class="instructor-card">
+                <div class="instructor-photo">
+                    <img src="../ShereeProfilePic.jpg" alt="Sheree DiBiase, PT, PRPC, ICLM">
+                </div>
+                <div class="instructor-info">
+                    <h3>Sheree DiBiase, PT, PRPC, ICLM</h3>
+                    <p class="instructor-title">Pelvic Floor Specialist — 40+ Years Experience</p>
+                    <p class="instructor-bio">Sheree is the founder of Lake City Physical Therapy, creator of the Pelvic Floor Pro medical app, and a former professor at Loma Linda University. She's helped thousands of patients strengthen their pelvic floor and regain confidence.</p>
+                    <div class="credentials-row">
+                        <span class="credential-tag">PRPC Certified</span>
+                        <span class="credential-tag">40+ Years Experience</span>
+                        <span class="credential-tag">Pelvic Floor Pro Creator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Get Started</span>
+                <h2>Enroll in the Class Today</h2>
+                <p class="section-desc">Get instant, lifetime access to the complete pelvic wellness exercises class.</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-badge">Best Value</div>
+                <h3>Pelvic Wellness Exercises</h3>
+                <p>Complete Starter Class</p>
+                <div class="pricing-price">
+                    <div class="pricing-current"><sup>$</sup>39</div>
+                    <div class="pricing-savings">Lifetime Access Included</div>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>1+ hour follow-along video class</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>20+ exercises demonstrated</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>Lifetime access — watch anytime</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span>Expert instruction from a 40-year specialist</span>
+                    </div>
+                </div>
+                <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3678297?price_id=4624240&coupon=starter" class="pricing-cta cta-checkout" data-cta-location="pricing_section">
+                    Get Instant Access — $39
+                </a>
+                <p class="urgency-note">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    Secure checkout • Instant access
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta reveal">
+        <div class="section-container">
+            <h2>Start Your Pelvic Floor Journey Today</h2>
+            <p>Join the class and learn the exact techniques a leading pelvic floor specialist has used with thousands of patients over 40 years.</p>
+            <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3678297?price_id=4624240&coupon=starter" class="btn-primary cta-checkout" data-cta-location="final_cta">
+                Get the Class for $39
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+            <div class="final-price">
+                <span class="current">Only $39 • Lifetime Access</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sheree DiBiase, PT. All rights reserved.</p>
+    </footer>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWML8QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Scroll Reveal Observer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var revealElements = document.querySelectorAll('.reveal');
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
