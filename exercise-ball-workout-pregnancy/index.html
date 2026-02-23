@@ -685,173 +685,6 @@
             border-top: 1px solid #243640;
         }
 
-        /* ===== POPUP STYLES ===== */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            z-index: 9999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .popup-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .popup-content {
-            background: linear-gradient(180deg, #243640 0%, #1A2830 100%);
-            border-radius: 24px;
-            padding: 40px 30px;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            border: 1px solid #3A4F5A;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
-        }
-
-        .popup-overlay.active .popup-content {
-            transform: scale(1);
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: #3A4F5A;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s ease;
-        }
-
-        .popup-close:hover {
-            background: #4A6070;
-        }
-
-        .popup-close svg {
-            width: 16px;
-            height: 16px;
-            color: var(--light-slate);
-        }
-
-        .popup-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(138, 158, 131, 0.15);
-            border: 1px solid rgba(138, 158, 131, 0.3);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--sage);
-            margin-bottom: 20px;
-        }
-
-        .popup-content h2 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-            line-height: 1.2;
-        }
-
-        .popup-content h2 span {
-            color: var(--aqua);
-        }
-
-        .popup-content > p {
-            color: var(--light-slate);
-            margin-bottom: 24px;
-            font-size: 1rem;
-        }
-
-        .popup-price {
-            margin-bottom: 24px;
-            padding: 20px;
-            background: rgba(90, 173, 181, 0.05);
-            border-radius: 12px;
-            border: 1px dashed rgba(90, 173, 181, 0.3);
-        }
-
-        .popup-price .original {
-            color: #6A7D85;
-            text-decoration: line-through;
-            font-size: 1.2rem;
-        }
-
-        .popup-price .sale {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--aqua);
-            display: block;
-            line-height: 1;
-        }
-
-        .popup-price .sale sup {
-            font-size: 1.5rem;
-            vertical-align: super;
-        }
-
-        .popup-price .save-tag {
-            display: inline-block;
-            background: rgba(138, 158, 131, 0.15);
-            color: var(--sage-dark);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 8px;
-        }
-
-        .popup-button {
-            display: block;
-            width: 100%;
-            background: var(--gradient);
-            color: white;
-            padding: 18px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(90, 173, 181, 0.3);
-            margin-bottom: 16px;
-        }
-
-        .popup-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(90, 173, 181, 0.4);
-        }
-
-        .popup-no-thanks {
-            color: #6A7D85;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .popup-no-thanks:hover {
-            color: var(--light-slate);
-        }
-
         /* Scroll reveal */
         .reveal {
             opacity: 0;
@@ -915,17 +748,6 @@
                 font-size: 2.8rem;
             }
 
-            .popup-content {
-                padding: 30px 20px;
-            }
-
-            .popup-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .popup-price .sale {
-                font-size: 3rem;
-            }
         }
 
         @media (max-width: 480px) {
@@ -1197,55 +1019,16 @@
         <p>&copy; 2025 Sheree DiBiase, PT. All rights reserved.</p>
     </footer>
 
-    <!-- ===== DISCOUNT POPUP ===== -->
-    <div class="popup-overlay" id="discountPopup">
-        <div class="popup-content">
-            <button class="popup-close" id="popupClose">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-
-            <div class="popup-badge">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
-                </svg>
-                Special Offer Unlocked
-            </div>
-
-            <h2>Thanks for watching!<br>Here's <span>50% off</span></h2>
-            <p>Get the full class right now at half price</p>
-
-            <div class="popup-price">
-                <span class="original">$39</span>
-                <span class="sale"><sup>$</sup>19</span>
-                <span class="save-tag">You save $20</span>
-            </div>
-
-            <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3678297?coupon=review"
-               class="popup-button cta-checkout"
-               data-cta-location="popup_cta"
-               data-price="19"
-               id="popupCTA">
-                Claim 50% Off — Get It for $19
-            </a>
-
-            <div class="popup-no-thanks" id="popupNoThanks">No thanks, I'll pay full price</div>
-        </div>
-    </div>
-
     <!-- YouTube IFrame API & Tracking -->
     <script>
         // ===== CONFIGURATION =====
         const VIDEO_ID = '3n_Xk13bB00';
         const MILESTONES = [0, 25, 50, 75, 95];
-        const POPUP_THRESHOLD = 95;
 
         // ===== STATE =====
         let player;
         let progressInterval;
         let milestonesReached = {};
-        let popupShown = false;
         let videoStarted = false;
         let videoCompleted = false;
 
@@ -1354,7 +1137,6 @@
                             completed: true
                         });
                         updateMilestoneUI(100);
-                        showPopup();
                     }
                     break;
             }
@@ -1393,9 +1175,6 @@
                         completed: milestone >= 95
                     });
                     updateMilestoneUI(milestone);
-                    if (milestone >= POPUP_THRESHOLD && !popupShown) {
-                        showPopup();
-                    }
                 }
             });
         }
@@ -1415,23 +1194,6 @@
             if (milestone >= 95) document.getElementById('m100').classList.add('reached');
         }
 
-        // ===== POPUP =====
-        function showPopup() {
-            if (popupShown) return;
-            popupShown = true;
-            document.getElementById('discountPopup').classList.add('active');
-            document.body.style.overflow = 'hidden';
-            trackEvent('Discount Popup Shown', {
-                percent_watched: getCurrentPercent(),
-                offer_price: 19
-            });
-        }
-
-        function closePopup() {
-            document.getElementById('discountPopup').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
         // ===== UTILITIES =====
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
@@ -1441,13 +1203,6 @@
 
         // ===== EVENT LISTENERS =====
         document.addEventListener('DOMContentLoaded', () => {
-            // Popup controls
-            document.getElementById('popupClose').addEventListener('click', closePopup);
-            document.getElementById('popupNoThanks').addEventListener('click', closePopup);
-            document.getElementById('discountPopup').addEventListener('click', (e) => {
-                if (e.target.id === 'discountPopup') closePopup();
-            });
-
             // CTA click tracking - all buttons
             document.querySelectorAll('.cta-checkout').forEach(btn => {
                 btn.addEventListener('click', function() {

@@ -437,190 +437,6 @@
             font-size: 0.8rem;
         }
 
-        /* ===== POPUP STYLES ===== */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(8px);
-            z-index: 9999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .popup-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .popup-content {
-            background: linear-gradient(180deg, #243640 0%, #1A2830 100%);
-            border-radius: 24px;
-            padding: 40px 30px;
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            border: 1px solid #3A4F5A;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
-        }
-
-        .popup-overlay.active .popup-content {
-            transform: scale(1);
-        }
-
-        .popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: #3A4F5A;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s ease;
-        }
-
-        .popup-close:hover {
-            background: #4A6070;
-        }
-
-        .popup-close svg {
-            width: 16px;
-            height: 16px;
-            color: #8A9BA3;
-        }
-
-        .popup-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(139, 157, 131, 0.15);
-            border: 1px solid rgba(139, 157, 131, 0.3);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--sage);
-            margin-bottom: 20px;
-        }
-
-        .popup-badge svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        .popup-content h2 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-            line-height: 1.2;
-        }
-
-        .popup-content h2 span {
-            color: var(--aqua);
-        }
-
-        .popup-content > p {
-            color: #8A9BA3;
-            margin-bottom: 24px;
-            font-size: 1rem;
-        }
-
-        .popup-price {
-            margin-bottom: 24px;
-            padding: 20px;
-            background: rgba(90, 173, 181, 0.05);
-            border-radius: 12px;
-            border: 1px dashed rgba(90, 173, 181, 0.3);
-        }
-
-        .popup-price .original {
-            color: #6A7D85;
-            text-decoration: line-through;
-            font-size: 1.2rem;
-        }
-
-        .popup-price .sale {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--aqua);
-            display: block;
-            line-height: 1;
-        }
-
-        .popup-price .sale sup {
-            font-size: 1.5rem;
-            vertical-align: super;
-        }
-
-        .popup-price .save-tag {
-            display: inline-block;
-            background: rgba(139, 157, 131, 0.15);
-            color: var(--sage-dark);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-top: 8px;
-        }
-
-        .popup-button {
-            display: block;
-            width: 100%;
-            background: var(--gradient);
-            color: white;
-            padding: 18px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 30px rgba(90, 173, 181, 0.3);
-            margin-bottom: 16px;
-        }
-
-        .popup-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(90, 173, 181, 0.4);
-        }
-
-        .popup-no-thanks {
-            color: #6A7D85;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .popup-no-thanks:hover {
-            color: #8A9BA3;
-        }
-
-        .popup-urgency {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #3A4F5A;
-            color: #8A9BA3;
-            font-size: 0.85rem;
-        }
-
-        .popup-urgency strong {
-            color: var(--gold);
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .header h1 {
@@ -670,18 +486,6 @@
                 text-align: center;
             }
 
-            .popup-content {
-                padding: 30px 20px;
-            }
-
-            .popup-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .popup-price .sale {
-                font-size: 3rem;
-            }
-
             .video-info {
                 flex-direction: column;
                 gap: 12px;
@@ -715,7 +519,7 @@
                 border-radius: 12px;
             }
 
-            .cta-button, .popup-button {
+            .cta-button {
                 font-size: 1rem;
                 padding: 16px 20px;
             }
@@ -893,47 +697,6 @@
         </footer>
     </div>
 
-    <!-- ===== DISCOUNT POPUP (Shows after video ends) ===== -->
-    <div class="popup-overlay" id="discountPopup">
-        <div class="popup-content">
-            <button class="popup-close" id="popupClose">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-
-            <div class="popup-badge">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>
-                </svg>
-                Special Offer Unlocked
-            </div>
-
-            <h2>You watched the preview!<br>Here's <span>50% off</span></h2>
-            <p>Get the full class right now at half price</p>
-
-            <div class="popup-price">
-                <span class="original">$39</span>
-                <span class="sale"><sup>$</sup>19</span>
-                <span class="save-tag">You save $20</span>
-            </div>
-
-            <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3678297?coupon=review"
-               class="popup-button cta-checkout"
-               data-cta-location="popup_cta"
-               data-price="19"
-               id="popupCTA">
-                Claim 50% Off — Get It for $19
-            </a>
-
-            <div class="popup-no-thanks" id="popupNoThanks">No thanks, I'll pay full price</div>
-
-            <div class="popup-urgency">
-                <strong>This offer expires</strong> when you leave this page
-            </div>
-        </div>
-    </div>
-
     <!-- ===== JAVASCRIPT ===== -->
     <script>
         // Elements
@@ -941,16 +704,10 @@
         const progressFill = document.getElementById('progressFill');
         const timeRemaining = document.getElementById('timeRemaining');
         const keepWatching = document.getElementById('keepWatching');
-        const discountPopup = document.getElementById('discountPopup');
-        const popupClose = document.getElementById('popupClose');
-        const popupNoThanks = document.getElementById('popupNoThanks');
         const mainCTA = document.getElementById('mainCTA');
-        const popupCTA = document.getElementById('popupCTA');
 
         // Track video progress milestones
         let milestones = { 25: false, 50: false, 75: false, 100: false };
-        let popupShown = false;
-
         // Format time as MM:SS
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
@@ -992,62 +749,6 @@
             if (percent >= 95 && !milestones[100]) {
                 milestones[100] = true;
                 trackVideoProgress(100);
-            }
-        });
-
-        // Video ended - show popup
-        video.addEventListener('ended', function() {
-            if (!popupShown) {
-                showPopup();
-            }
-        });
-
-        // Also show popup if they watch 95%+
-        video.addEventListener('timeupdate', function() {
-            const percent = (video.currentTime / video.duration) * 100;
-            if (percent >= 95 && !popupShown) {
-                showPopup();
-            }
-        });
-
-        // Show popup function
-        function showPopup() {
-            popupShown = true;
-            discountPopup.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-            // Track popup view
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'ViewContent', {
-                    content_name: 'Discount Popup',
-                    content_category: 'Video Completion Offer',
-                    value: 19,
-                    currency: 'USD'
-                });
-            }
-
-            // GTM Event
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'popup_shown',
-                    'popup_type': 'video_completion_discount'
-                });
-            }
-        }
-
-        // Close popup
-        function closePopup() {
-            discountPopup.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        popupClose.addEventListener('click', closePopup);
-        popupNoThanks.addEventListener('click', closePopup);
-
-        // Close on overlay click
-        discountPopup.addEventListener('click', function(e) {
-            if (e.target === discountPopup) {
-                closePopup();
             }
         });
 
@@ -1096,10 +797,6 @@
         // Add click tracking to CTAs
         mainCTA.addEventListener('click', function() {
             trackCTAClick('main_cta', 39);
-        });
-
-        popupCTA.addEventListener('click', function() {
-            trackCTAClick('popup_cta', 19);
         });
 
         // Track video play
