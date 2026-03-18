@@ -49,7 +49,7 @@ Every page follows this structure:
 2. JSON-LD structured data (VideoObject, Article, FAQPage, or Product schema)
 3. Google Fonts preconnect + stylesheet link
 4. Klaviyo snippet (`company_id=VfvegM`)
-5. GTM script (`GTM-PWML8QD`)
+5. GTM script (`GTM-MFF4BKKX`)
 6. Inline `<style>` block with full CSS (including responsive breakpoints at 1024px, 768px, 380px)
 7. Body sections with `.reveal` class for scroll animations
 8. GTM noscript iframe
@@ -61,7 +61,7 @@ Every page follows this structure:
 |---------|---------|------------|
 | **Vercel** | Static hosting | Project in `.vercel/project.json` |
 | **Klaviyo** | Email marketing & tracking | `company_id=VfvegM` |
-| **GTM** | Analytics | `GTM-PWML8QD` |
+| **GTM** | Analytics | `GTM-MFF4BKKX` |
 | **Thinkific** | Course checkout | Enrollment links (`sheree-s-site-bb02.thinkific.com`) |
 | **YouTube** | Video hosting | IFrame API embeds |
 
