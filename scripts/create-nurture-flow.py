@@ -4,12 +4,13 @@ Create a 21-email video nurture campaign flow in Klaviyo.
 Each email sends 1 day apart, guiding subscribers to a video page.
 """
 
+import os
 import requests
 import json
 import time
 import sys
 
-API_KEY = "pk_4b0dc6582ecdbb6e0e37fd9762d03dba51"
+API_KEY = os.environ.get("KLAVIYO_API_KEY", "")
 REVISION = "2025-01-15"
 BASE_URL = "https://a.klaviyo.com/api"
 SITE_URL = "https://pelvicfloorexercises.com"
