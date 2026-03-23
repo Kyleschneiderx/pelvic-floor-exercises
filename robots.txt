@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /video-funnel/
+Disallow: /youtube-funnel/
+Disallow: /sui-class-sale/
+
+Sitemap: https://pelvicfloorexercises.com/sitemap.xml
