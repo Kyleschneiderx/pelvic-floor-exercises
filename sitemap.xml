@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://pelvicfloorexercises.com/</loc>
     <changefreq>weekly</changefreq>
@@ -9,121 +10,265 @@
     <loc>https://pelvicfloorexercises.com/pelvic-floor-exercises-for-women/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/uYsabfqM-9w/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Top 5 Pelvic Floor Exercises for Women</video:title>
+      <video:description>A comprehensive video guide to the top 5 pelvic floor exercises for women, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/uYsabfqM-9w</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/pelvic-floor-exercises-urinary-incontinence/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Tv0-KM_V8Qk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Top 5 Pelvic Floor Exercises for Urinary Incontinence Relief</video:title>
+      <video:description>A comprehensive video guide to the top 5 pelvic floor exercises for urinary incontinence, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Tv0-KM_V8Qk</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/pelvic-floor-exercises-incontinence-chair-routine/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/eO0fQHiQH1Q/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Pelvic Floor Exercises for Incontinence: 10-Minute Chair Routine</video:title>
+      <video:description>A guided 10-minute chair-based pelvic floor exercise routine designed to help manage urinary incontinence, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/eO0fQHiQH1Q</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/pelvic-floor-exercises-for-prolapse/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/0fsUk656uqs/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Pelvic Floor Exercises for Prolapse</video:title>
+      <video:description>An expert guide to safe and effective pelvic floor exercises for pelvic organ prolapse, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/0fsUk656uqs</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/pelvic-floor-exercises-for-vaginismus/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/-ajvkXCR3oY/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Pelvic Floor Exercises for Vaginismus</video:title>
+      <video:description>A gentle guide to pelvic floor relaxation exercises for vaginismus relief, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/-ajvkXCR3oY</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/standing-pelvic-floor-exercises-prolapse/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/V0stR30sql4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Standing Pelvic Floor Exercises for Prolapse Relief</video:title>
+      <video:description>A video guide to standing pelvic floor exercises for prolapse relief, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/V0stR30sql4</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/pelvic-floor-exercises-pregnancy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/epNBTbigugc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Pelvic Floor Exercises for Pregnant Women</video:title>
+      <video:description>A comprehensive video guide to safe pelvic floor exercises during pregnancy, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/epNBTbigugc</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/pelvic-floor-tight-or-weak/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/8ghjha-7uJc/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Is Your Pelvic Floor Too Tight or Too Weak?</video:title>
+      <video:description>A video guide to help you determine whether your pelvic floor is hypertonic (too tight) or hypotonic (too weak), with self-assessment tips from Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/8ghjha-7uJc</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/pelvic-floor-exercises-better-than-kegels/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/0SmfjnisWjI/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Pelvic Floor Exercises Better Than Kegels</video:title>
+      <video:description>An expert video guide demonstrating pelvic floor exercises that go beyond traditional Kegels, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/0SmfjnisWjI</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/lymphedema-after-breast-cancer-surgery/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/CBEPu8Vt-mM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Lymphedema After Breast Cancer Surgery: What You Need to Know</video:title>
+      <video:description>A comprehensive video about lymphedema risk, prevention, and management after breast cancer surgery, by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/CBEPu8Vt-mM</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/perimenopause-signs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/CKdsCEzy6L0/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>How Do I Know If I'm in Perimenopause? Signs &amp; Symptoms</video:title>
+      <video:description>A comprehensive video explaining perimenopause signs, symptoms, and management strategies, by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/CKdsCEzy6L0</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/manual-lymph-drainage-technique/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/IOm9ZfVKbQ4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Manual Lymph Drainage: Essential Technique Guide</video:title>
+      <video:description>A comprehensive video guide to manual lymph drainage technique, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/IOm9ZfVKbQ4</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/exercises-after-breast-surgery/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/HfSS1waukjw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Easy Gentle Exercises After Breast Surgery</video:title>
+      <video:description>A comprehensive video guide to safe, gentle exercises after breast surgery, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/HfSS1waukjw</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/best-labor-positions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Dj8fSL_dLCQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Best Labor Positions for Each Stage of Birth</video:title>
+      <video:description>A comprehensive video guide to the best labor positions for every stage of birth, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Dj8fSL_dLCQ</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/hip-rotation-exercises-pelvic-floor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/C3ID4g8BvB4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Hip Rotation Exercises for Pelvic Floor Strength</video:title>
+      <video:description>An expert video guide to hip rotation exercises that strengthen the pelvic floor, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/C3ID4g8BvB4</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/third-trimester-pelvic-floor-exercises/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/tanAnZCVGIo/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Third Trimester Pelvic Floor Exercises</video:title>
+      <video:description>A comprehensive video guide to third trimester pelvic floor exercises, taught by Sheree DiBiase, PT. Safe exercises to prepare your body for labor and delivery.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/tanAnZCVGIo</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/all-fours-position-labor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/KhzBzMKUKPU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>All Fours Position for Labor &amp; Delivery</video:title>
+      <video:description>A comprehensive video guide to using the all fours position during labor, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/KhzBzMKUKPU</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/hip-flexor-stretches-labor-prep/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/POz6Kb046ms/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Hip Flexor Stretches for Labor Prep</video:title>
+      <video:description>A comprehensive video guide to hip flexor stretches for labor preparation, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/POz6Kb046ms</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/exercise-ball-workout-pregnancy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3n_Xk13bB00/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Exercise Ball Workout for Pregnancy</video:title>
+      <video:description>A comprehensive video guide to exercise ball workouts during pregnancy, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/3n_Xk13bB00</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/deep-squat-pregnancy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/qLQeOIdSQW4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Deep Squat for Pregnancy</video:title>
+      <video:description>A comprehensive video guide to safe deep squatting during pregnancy, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/qLQeOIdSQW4</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/perimenopause-pelvic-floor-health/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/XuJKDaqsj2k/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Perimenopause Signs &amp; Symptoms: Pelvic Floor Health</video:title>
+      <video:description>An expert video guide on how perimenopause signs and symptoms affect pelvic floor health, taught by Sheree DiBiase, PT.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/XuJKDaqsj2k</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/does-a-weak-pelvic-floor-cause-incontinence/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/r5lhd6jJyjk/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Does a Weak Pelvic Floor Cause Incontinence?</video:title>
+      <video:description>Pelvic floor physical therapist Sheree DiBiase answers the question: does a weak pelvic floor cause incontinence? Learn the connection between pelvic floor weakness and bladder leakage.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/r5lhd6jJyjk</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/can-pelvic-floor-exercises-help-with-incontinence/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/5imnUo1vfHw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Can Pelvic Floor Exercises Help with Incontinence?</video:title>
+      <video:description>Pelvic floor physical therapist Sheree DiBiase explains how pelvic floor exercises help reduce and eliminate incontinence, including techniques for different muscle imbalances.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/5imnUo1vfHw</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/can-pelvic-floor-exercises-make-incontinence-worse/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/UsFayFrmi0s/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Can Pelvic Floor Exercises Make Incontinence Worse?</video:title>
+      <video:description>Pelvic floor physical therapist Sheree DiBiase explains why pelvic floor exercises can sometimes worsen incontinence and what to do about it.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/UsFayFrmi0s</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://pelvicfloorexercises.com/stress-urinary-incontinence-class/</loc>
