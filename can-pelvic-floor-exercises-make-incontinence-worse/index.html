@@ -109,6 +109,17 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pelvicfloorexercises.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Can Pelvic Floor Exercises Make Incontinence Worse?", "item": "https://pelvicfloorexercises.com/can-pelvic-floor-exercises-make-incontinence-worse/"}
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -781,6 +792,17 @@
                 padding: 20px;
             }
         }
+
+        /* Related Videos */
+        .related-section { padding: 60px 20px; background: var(--cream); }
+        .related-section h2 { text-align: center; margin-bottom: 32px; }
+        .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .related-card { background: white; border: 1px solid var(--cream-dark); border-radius: 16px; overflow: hidden; text-decoration: none; transition: all 0.3s ease; }
+        .related-card:hover { border-color: var(--aqua-light); box-shadow: 0 8px 30px rgba(90, 173, 181, 0.1); transform: translateY(-3px); }
+        .related-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+        .related-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--charcoal); padding: 14px 16px; line-height: 1.4; }
+        @media (max-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .related-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -829,7 +851,7 @@
             </div>
 
             <div class="author-mini">
-                <img src="../ShereeProfilePic.jpg" alt="Sheree DiBiase, PT">
+                <img src="../ShereeProfilePic.jpg" alt="Sheree DiBiase, PT, PRPC, ICLM">
                 <div class="author-mini-info">
                     <h3>Sheree DiBiase, PT, PRPC, ICLM</h3>
                     <p>Pelvic floor specialist with 40+ years experience. Founder of Lake City Physical Therapy and creator of the Pelvic Floor Pro app.</p>
@@ -1078,6 +1100,29 @@
                     Secure checkout &bull; Instant access
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Related Videos -->
+    <section class="related-section reveal">
+        <h2>Related Videos</h2>
+        <div class="related-grid">
+            <a href="/can-pelvic-floor-exercises-help-with-incontinence/" class="related-card">
+                <img src="https://img.youtube.com/vi/5imnUo1vfHw/mqdefault.jpg" alt="Can Pelvic Floor Exercises Help with Incontinence?" loading="lazy">
+                <h3>Can Pelvic Floor Exercises Help with Incontinence?</h3>
+            </a>
+            <a href="/does-a-weak-pelvic-floor-cause-incontinence/" class="related-card">
+                <img src="https://img.youtube.com/vi/r5lhd6jJyjk/mqdefault.jpg" alt="Does a Weak Pelvic Floor Cause Incontinence?" loading="lazy">
+                <h3>Does a Weak Pelvic Floor Cause Incontinence?</h3>
+            </a>
+            <a href="/pelvic-floor-exercises-urinary-incontinence/" class="related-card">
+                <img src="https://img.youtube.com/vi/Tv0-KM_V8Qk/mqdefault.jpg" alt="Top 5 Exercises for Urinary Incontinence Relief" loading="lazy">
+                <h3>Top 5 Exercises for Urinary Incontinence Relief</h3>
+            </a>
+            <a href="/pelvic-floor-tight-or-weak/" class="related-card">
+                <img src="https://img.youtube.com/vi/8ghjha-7uJc/mqdefault.jpg" alt="Is Your Pelvic Floor Too Tight or Too Weak?" loading="lazy">
+                <h3>Is Your Pelvic Floor Too Tight or Too Weak?</h3>
+            </a>
         </div>
     </section>
 

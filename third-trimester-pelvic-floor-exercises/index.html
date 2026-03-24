@@ -109,6 +109,17 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pelvicfloorexercises.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Third Trimester Pelvic Floor Exercises", "item": "https://pelvicfloorexercises.com/third-trimester-pelvic-floor-exercises/"}
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -771,6 +782,17 @@
                 padding: 20px;
             }
         }
+
+        /* Related Videos */
+        .related-section { padding: 60px 20px; background: var(--cream); }
+        .related-section h2 { text-align: center; margin-bottom: 32px; }
+        .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .related-card { background: white; border: 1px solid var(--cream-dark); border-radius: 16px; overflow: hidden; text-decoration: none; transition: all 0.3s ease; }
+        .related-card:hover { border-color: var(--aqua-light); box-shadow: 0 8px 30px rgba(90, 173, 181, 0.1); transform: translateY(-3px); }
+        .related-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+        .related-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--charcoal); padding: 14px 16px; line-height: 1.4; }
+        @media (max-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .related-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -819,7 +841,7 @@
             </div>
 
             <div class="author-mini">
-                <img src="../ShereeProfilePic.jpg" alt="Sheree DiBiase, PT">
+                <img src="../ShereeProfilePic.jpg" alt="Sheree DiBiase, PT, PRPC, ICLM">
                 <div class="author-mini-info">
                     <h3>Sheree DiBiase, PT, PRPC, ICLM</h3>
                     <p>Pelvic floor specialist with 40+ years experience. Founder of Lake City Physical Therapy and creator of the Pelvic Floor Pro app.</p>
@@ -1032,6 +1054,29 @@
                     Secure checkout &bull; Instant access
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Related Videos -->
+    <section class="related-section reveal">
+        <h2>Related Videos</h2>
+        <div class="related-grid">
+            <a href="/pelvic-floor-exercises-pregnancy/" class="related-card">
+                <img src="https://img.youtube.com/vi/epNBTbigugc/mqdefault.jpg" alt="Pelvic Floor Exercises for Pregnant Women" loading="lazy">
+                <h3>Pelvic Floor Exercises for Pregnant Women</h3>
+            </a>
+            <a href="/best-labor-positions/" class="related-card">
+                <img src="https://img.youtube.com/vi/Dj8fSL_dLCQ/mqdefault.jpg" alt="Best Labor Positions for Each Stage of Birth" loading="lazy">
+                <h3>Best Labor Positions for Each Stage of Birth</h3>
+            </a>
+            <a href="/exercise-ball-workout-pregnancy/" class="related-card">
+                <img src="https://img.youtube.com/vi/3n_Xk13bB00/mqdefault.jpg" alt="Exercise Ball Workout for Pregnancy" loading="lazy">
+                <h3>Exercise Ball Workout for Pregnancy</h3>
+            </a>
+            <a href="/deep-squat-pregnancy/" class="related-card">
+                <img src="https://img.youtube.com/vi/qLQeOIdSQW4/mqdefault.jpg" alt="Deep Squat for Pregnancy" loading="lazy">
+                <h3>Deep Squat for Pregnancy</h3>
+            </a>
         </div>
     </section>
 

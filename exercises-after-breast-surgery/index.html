@@ -109,6 +109,17 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pelvicfloorexercises.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Easy Gentle Exercises After Breast Surgery", "item": "https://pelvicfloorexercises.com/exercises-after-breast-surgery/"}
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -771,6 +782,17 @@
                 padding: 20px;
             }
         }
+
+        /* Related Videos */
+        .related-section { padding: 60px 20px; background: var(--cream); }
+        .related-section h2 { text-align: center; margin-bottom: 32px; }
+        .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .related-card { background: white; border: 1px solid var(--cream-dark); border-radius: 16px; overflow: hidden; text-decoration: none; transition: all 0.3s ease; }
+        .related-card:hover { border-color: var(--aqua-light); box-shadow: 0 8px 30px rgba(90, 173, 181, 0.1); transform: translateY(-3px); }
+        .related-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+        .related-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--charcoal); padding: 14px 16px; line-height: 1.4; }
+        @media (max-width: 768px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .related-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -819,7 +841,7 @@
             </div>
 
             <div class="author-mini">
-                <img src="../ShereeProfilePic.jpg" alt="Sheree DiBiase, PT">
+                <img src="../ShereeProfilePic.jpg" alt="Sheree DiBiase, PT, PRPC, ICLM">
                 <div class="author-mini-info">
                     <h3>Sheree DiBiase, PT, PRPC, ICLM</h3>
                     <p>Pelvic floor specialist with 40+ years experience. Founder of Lake City Physical Therapy and creator of the Pelvic Floor Pro app.</p>
@@ -1006,6 +1028,29 @@
                     Secure checkout &bull; Instant access
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Related Videos -->
+    <section class="related-section reveal">
+        <h2>Related Videos</h2>
+        <div class="related-grid">
+            <a href="/lymphedema-after-breast-cancer-surgery/" class="related-card">
+                <img src="https://img.youtube.com/vi/CBEPu8Vt-mM/mqdefault.jpg" alt="Lymphedema After Breast Cancer Surgery" loading="lazy">
+                <h3>Lymphedema After Breast Cancer Surgery</h3>
+            </a>
+            <a href="/manual-lymph-drainage-technique/" class="related-card">
+                <img src="https://img.youtube.com/vi/IOm9ZfVKbQ4/mqdefault.jpg" alt="Manual Lymph Drainage: Essential Technique" loading="lazy">
+                <h3>Manual Lymph Drainage: Essential Technique</h3>
+            </a>
+            <a href="/pelvic-floor-exercises-for-women/" class="related-card">
+                <img src="https://img.youtube.com/vi/uYsabfqM-9w/mqdefault.jpg" alt="Top 5 Pelvic Floor Exercises for Women" loading="lazy">
+                <h3>Top 5 Pelvic Floor Exercises for Women</h3>
+            </a>
+            <a href="/perimenopause-signs/" class="related-card">
+                <img src="https://img.youtube.com/vi/CKdsCEzy6L0/mqdefault.jpg" alt="How Do I Know If I'm in Perimenopause?" loading="lazy">
+                <h3>How Do I Know If I'm in Perimenopause?</h3>
+            </a>
         </div>
     </section>
 
