@@ -13,7 +13,7 @@ import sys
 API_KEY = os.environ.get("KLAVIYO_API_KEY", "")
 REVISION = "2025-01-15"
 BASE_URL = "https://a.klaviyo.com/api"
-SITE_URL = "https://pelvicfloorexercises.com"
+SITE_URL = "https://www.pelvicfloorexercises.com"
 
 HEADERS = {
     "Authorization": f"Klaviyo-API-Key {API_KEY}",
