@@ -35,10 +35,10 @@
         "offers": {
             "@type": "Offer",
             "priceCurrency": "USD",
-            "price": "89.00",
+            "price": "112.00",
             "availability": "https://schema.org/InStock"
         },
-        "review": {
+        "review": [{
             "@type": "Review",
             "reviewRating": {
                 "@type": "Rating",
@@ -47,8 +47,16 @@
             },
             "author": {
                 "@type": "Person",
-                "name": "Patient"
-            }
+                "name": "Yvonne"
+            },
+            "datePublished": "2025-12-13",
+            "reviewBody": "Thank you for the program! I'm grateful you and others are talking about these matters openly these days! You make it all very approachable."
+        }],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "1"
         }
     }
     </script>
@@ -213,11 +221,10 @@
 
         /* ===== HERO SECTION ===== */
         .hero {
-            padding: 80px 20px 70px;
+            padding: 70px 20px 60px;
             background: linear-gradient(180deg, var(--cream) 0%, var(--warm-white) 100%);
             position: relative;
             overflow: hidden;
-            text-align: center;
         }
 
         .hero::before {
@@ -243,10 +250,48 @@
         }
 
         .hero-container {
-            max-width: 850px;
+            max-width: 1180px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text {
+            text-align: left;
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            min-height: 540px;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            aspect-ratio: 1;
+            background: radial-gradient(circle, rgba(90, 173, 181, 0.18) 0%, rgba(123, 164, 212, 0.10) 45%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-image img {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+            height: auto;
+            max-height: 620px;
+            filter: drop-shadow(0 25px 40px rgba(30, 45, 51, 0.18));
         }
 
         .hero-badge {
@@ -292,7 +337,7 @@
         .hero-cta-group {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             gap: 16px;
             margin-bottom: 40px;
         }
@@ -327,7 +372,7 @@
         .hero-price-row {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 16px;
             flex-wrap: wrap;
         }
@@ -338,12 +383,88 @@
             color: var(--aqua);
         }
 
+        .price-original {
+            font-size: 1.4rem;
+            color: var(--slate);
+            text-decoration: line-through;
+            text-decoration-color: rgba(196, 137, 154, 0.7);
+            text-decoration-thickness: 2px;
+            font-weight: 600;
+            opacity: 0.75;
+        }
+
+        .price-save-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, var(--rose) 0%, #b87385 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 14px rgba(196, 137, 154, 0.35);
+        }
+
+        .price-save-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse-dot 1.6s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        .pricing-original {
+            font-size: 1.5rem;
+            color: var(--slate);
+            text-decoration: line-through;
+            text-decoration-color: rgba(196, 137, 154, 0.7);
+            text-decoration-thickness: 2px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            opacity: 0.75;
+        }
+
+        .pricing-save-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, var(--rose) 0%, #b87385 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 14px rgba(196, 137, 154, 0.35);
+            margin-top: 14px;
+        }
+
+        .pricing-save-badge::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse-dot 1.6s ease-in-out infinite;
+        }
+
         .hero-stats {
             display: flex;
             gap: 40px;
-            justify-content: center;
+            justify-content: flex-start;
             padding: 28px 0 0;
             border-top: 1px solid rgba(90, 173, 181, 0.15);
+            flex-wrap: wrap;
         }
 
         .stat {
@@ -466,7 +587,50 @@
         .solution-section {
             padding: 70px 20px;
             background: linear-gradient(180deg, var(--cream) 0%, var(--warm-white) 100%);
-            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        .solution-image {
+            position: relative;
+        }
+
+        .solution-image::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            aspect-ratio: 1;
+            background: radial-gradient(circle, rgba(90, 173, 181, 0.12) 0%, rgba(228, 200, 208, 0.08) 50%, transparent 75%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .solution-image img {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 560px;
+            margin: 0 auto;
+            -webkit-mask-image: radial-gradient(ellipse 68% 72% at 50% 50%, #000 55%, rgba(0,0,0,0.6) 78%, transparent 100%);
+            mask-image: radial-gradient(ellipse 68% 72% at 50% 50%, #000 55%, rgba(0,0,0,0.6) 78%, transparent 100%);
+        }
+
+        .solution-content {
+            text-align: left;
         }
 
         .solution-section h2 span {
@@ -480,18 +644,15 @@
             font-size: 1.15rem;
             color: var(--slate);
             line-height: 1.8;
-            max-width: 680px;
-            margin: 0 auto 32px;
+            margin: 0 0 28px;
         }
 
         .solution-highlight {
             background: white;
             border: 2px solid var(--aqua-light);
             border-radius: 20px;
-            padding: 32px 40px;
-            max-width: 650px;
-            margin: 0 auto;
-            font-size: 1.1rem;
+            padding: 28px 32px;
+            font-size: 1.05rem;
             color: var(--charcoal);
             line-height: 1.7;
             position: relative;
@@ -774,6 +935,157 @@
             color: var(--gold);
             font-weight: 700;
             font-size: 1.15rem;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-section {
+            padding: 80px 20px;
+            background: var(--warm-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(228, 200, 208, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .testimonials-section::after {
+            content: '';
+            position: absolute;
+            bottom: -15%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(90, 173, 181, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .testimonials-section .section-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 22px;
+            padding: 32px 30px;
+            box-shadow: 0 12px 40px rgba(30, 45, 51, 0.06);
+            border: 1px solid rgba(90, 173, 181, 0.10);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 50px rgba(30, 45, 51, 0.10);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-author-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            line-height: 1.1;
+        }
+
+        .testimonial-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: var(--slate);
+            margin-top: 6px;
+        }
+
+        .testimonial-stars {
+            display: inline-flex;
+            gap: 2px;
+            color: var(--gold);
+        }
+
+        .testimonial-stars svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        .testimonial-meta-divider {
+            color: rgba(74, 92, 101, 0.4);
+        }
+
+        .testimonial-emoji {
+            font-size: 1.8rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .testimonial-quote {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--charcoal);
+            margin: 0;
+        }
+
+        .testimonial-quote::before {
+            content: '\201C';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            color: var(--aqua);
+            line-height: 0;
+            position: relative;
+            top: 14px;
+            margin-right: 4px;
+        }
+
+        .testimonials-trust-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 40px;
+            color: var(--slate);
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+
+        .testimonials-trust-stars {
+            display: inline-flex;
+            gap: 3px;
+            color: var(--gold);
+        }
+
+        .testimonials-trust-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
         }
 
         /* ===== FAQ ===== */
@@ -1072,6 +1384,16 @@
                 margin-right: auto;
             }
 
+            .solution-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+                max-width: 640px;
+            }
+
+            .solution-content {
+                text-align: center;
+            }
+
             .instructor-card {
                 flex-direction: column;
                 text-align: center;
@@ -1080,11 +1402,47 @@
             .credentials-row {
                 justify-content: center;
             }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+                order: 1;
+            }
+
+            .hero-image {
+                order: 2;
+                min-height: 420px;
+            }
+
+            .hero-image img {
+                max-height: 480px;
+            }
+
+            .hero-cta-group {
+                align-items: center;
+            }
+
+            .hero-price-row {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
         }
 
         @media (max-width: 768px) {
             .hero {
-                padding: 60px 16px 50px;
+                padding: 50px 16px 40px;
+            }
+
+            .hero-container {
+                gap: 24px;
             }
 
             .hero h1 {
@@ -1101,6 +1459,14 @@
                 font-size: 0.75rem;
                 padding: 6px 14px;
                 margin-bottom: 20px;
+            }
+
+            .hero-image {
+                min-height: 360px;
+            }
+
+            .hero-image img {
+                max-height: 400px;
             }
 
             .hero-stats {
@@ -1137,10 +1503,23 @@
             .curriculum-section,
             .who-section,
             .instructor-section,
+            .testimonials-section,
             .faq-section,
             .pricing-section,
             .final-cta {
                 padding: 50px 16px;
+            }
+
+            .testimonial-card {
+                padding: 26px 22px;
+            }
+
+            .testimonial-quote {
+                font-size: 1rem;
+            }
+
+            .testimonial-author-name {
+                font-size: 1.25rem;
             }
 
             .solution-section {
@@ -1276,44 +1655,52 @@
     <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="hero-container">
-            <div class="hero-badge">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                </svg>
-                8-Week Video Course
-            </div>
-            <h1>The Complete <span>Pelvic Wellness</span> Course</h1>
-            <p class="hero-subtitle">10 expert-led video lessons covering pelvic anatomy, targeted exercises, bladder health, bowel health, sexual wellness, and recovery tools &mdash; taught by a specialist with 40+ years of clinical experience.</p>
-
-            <div class="hero-cta-group">
-                <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?price_id=4692514" class="btn-primary cta-checkout" data-cta-location="hero">
-                    Enroll Now
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                     </svg>
-                </a>
-                <div class="hero-price-row">
-                    <span class="price-current">$89</span>
+                    8-Week Video Course
+                </div>
+                <h1>The Complete <span>Pelvic Wellness</span> Course</h1>
+                <p class="hero-subtitle">10 expert-led video lessons covering pelvic anatomy, targeted exercises, bladder health, bowel health, sexual wellness, and recovery tools &mdash; taught by a specialist with 40+ years of clinical experience.</p>
+
+                <div class="hero-cta-group">
+                    <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?coupon=try40" class="btn-primary cta-checkout" data-cta-location="hero">
+                        Enroll Now
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <div class="hero-price-row">
+                        <span class="price-original">$187</span>
+                        <span class="price-current">$112</span>
+                        <span class="price-save-badge">Save 40%</span>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Videos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Weeks</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Years Expertise</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Lifetime</div>
+                        <div class="stat-label">Access</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">10</div>
-                    <div class="stat-label">Videos</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">8</div>
-                    <div class="stat-label">Weeks</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Years Expertise</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">Lifetime</div>
-                    <div class="stat-label">Access</div>
-                </div>
+            <div class="hero-image">
+                <img src="../Instructor%20Pictures/1.png" alt="Sheree DiBiase, PT — Pelvic Floor Specialist" loading="eager">
             </div>
         </div>
     </section>
@@ -1377,12 +1764,62 @@
 
     <!-- ===== SOLUTION / TRANSITION ===== -->
     <section class="solution-section reveal">
-        <div class="section-narrow">
-            <span class="section-label">The Solution</span>
-            <h2>An 8-Week Program That Covers <span>Everything</span></h2>
-            <p class="solution-text">This isn't a single workout or a generic fitness class. It's a comprehensive, progressive program that takes you from pelvic anatomy fundamentals through exercises, bladder and bowel health, sexual wellness, and recovery &mdash; all guided by a specialist who's treated thousands of patients.</p>
-            <div class="solution-highlight">
-                What you'd learn over <strong>months of physical therapy sessions</strong> &mdash; structured into 10 video lessons you can follow at home, at your pace, with <strong>lifetime access</strong>.
+        <div class="solution-grid">
+            <div class="solution-image">
+                <img src="../Instructor%20Pictures/section3-social-proof.png" alt="Student social-proof testimonial alongside Pelvic Health Foundations course preview on laptop and phone" loading="lazy">
+            </div>
+            <div class="solution-content">
+                <span class="section-label">The Solution</span>
+                <h2>An 8-Week Program That Covers <span>Everything</span></h2>
+                <p class="solution-text">This isn't a single workout or a generic fitness class. It's a comprehensive, progressive program that takes you from pelvic anatomy fundamentals through exercises, bladder and bowel health, sexual wellness, and recovery &mdash; all guided by a specialist who's treated thousands of patients.</p>
+                <div class="solution-highlight">
+                    What you'd learn over <strong>months of physical therapy sessions</strong> &mdash; structured into 10 video lessons you can follow at home, at your pace, with <strong>lifetime access</strong>.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section reveal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Real Words From Real Students</span>
+                <h2>What Women Are Saying</h2>
+                <p class="section-desc">Honest, unedited feedback from women who've gone through the program.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-author">
+                            <span class="testimonial-author-name">Yvonne</span>
+                            <div class="testimonial-meta">
+                                <span class="testimonial-stars" aria-label="5 out of 5 stars">
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                                </span>
+                                <span class="testimonial-meta-divider">&middot;</span>
+                                <span>Verified Student</span>
+                            </div>
+                        </div>
+                        <span class="testimonial-emoji" role="img" aria-label="star-struck">&#129321;</span>
+                    </div>
+                    <p class="testimonial-quote">Thank you for the program! I'm grateful you and others are talking about these matters openly these days! You make it all very approachable.</p>
+                </article>
+            </div>
+
+            <div class="testimonials-trust-bar">
+                <span class="testimonials-trust-stars" aria-label="5 out of 5 stars average">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </span>
+                <span>Trusted by women across the country &mdash; backed by 40+ years of clinical experience.</span>
             </div>
         </div>
     </section>
@@ -1563,14 +2000,14 @@
     <section class="mid-cta reveal">
         <h2>Ready to Start Your Journey?</h2>
         <p>Get all 10 lessons with lifetime access &mdash; start building a stronger pelvic floor today.</p>
-        <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?price_id=4692514" class="btn-primary cta-checkout" data-cta-location="mid_cta">
-            Enroll Now &mdash; $89
+        <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?coupon=try40" class="btn-primary cta-checkout" data-cta-location="mid_cta">
+            Enroll Now &mdash; $112
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
         </a>
         <div class="mid-cta-price">
-            <span class="current">$89 &bull; Lifetime Access</span>
+            <span class="current"><s style="opacity:0.55;text-decoration-color:#E4C8D0;">$187</s>&nbsp;&nbsp;$112 &bull; Save 40% &bull; Lifetime Access</span>
         </div>
     </section>
 
@@ -1741,8 +2178,10 @@
                 <h3>8-Week Pelvic Wellness Course</h3>
                 <p>10 Expert-Led Video Lessons</p>
                 <div class="pricing-price">
-                    <div class="pricing-amount"><sup>$</sup>89</div>
+                    <div class="pricing-original">$187</div>
+                    <div class="pricing-amount"><sup>$</sup>112</div>
                     <div class="pricing-note">Lifetime Access</div>
+                    <div class="pricing-save-badge">Limited Time &mdash; Save 40%</div>
                 </div>
                 <div class="pricing-features">
                     <div class="pricing-feature">
@@ -1770,8 +2209,8 @@
                         <span>Lifetime access &mdash; watch anytime, any device</span>
                     </div>
                 </div>
-                <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?price_id=4692514" class="pricing-cta cta-checkout" data-cta-location="pricing">
-                    Get Instant Access &mdash; $89
+                <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?coupon=try40" class="pricing-cta cta-checkout" data-cta-location="pricing">
+                    Get Instant Access &mdash; $112
                 </a>
                 <p class="secure-note">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1788,14 +2227,14 @@
         <div class="section-container">
             <h2>Your Pelvic Health Deserves Expert Care</h2>
             <p>Stop guessing and start healing. Get 10 comprehensive lessons from one of the country's top pelvic floor specialists &mdash; and take the first step toward feeling stronger, more confident, and more in control of your body.</p>
-            <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?price_id=4692514" class="btn-primary cta-checkout" data-cta-location="final_cta">
-                Enroll Now &mdash; $89
+            <a href="https://sheree-s-site-bb02.thinkific.com/enroll/3739521?coupon=try40" class="btn-primary cta-checkout" data-cta-location="final_cta">
+                Enroll Now &mdash; $112
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
             <div class="final-price">
-                <span class="current">$89 &bull; Lifetime Access</span>
+                <span class="current"><s style="opacity:0.55;text-decoration-color:#E4C8D0;">$187</s>&nbsp;&nbsp;$112 &bull; Save 40% &bull; Lifetime Access</span>
             </div>
         </div>
     </section>
