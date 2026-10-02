@@ -420,5 +420,6 @@
         function formatTime(seconds) { const mins = Math.floor(seconds / 60); const secs = Math.floor(seconds % 60); return mins + ':' + secs.toString().padStart(2, '0'); }
         document.addEventListener('DOMContentLoaded', () => { document.querySelectorAll('.cta-checkout').forEach(btn => { btn.addEventListener('click', function() { trackEvent('CTA Clicked', { cta_location: this.dataset.ctaLocation, price: parseInt(this.dataset.price), percent_watched: getCurrentPercent() }); }); }); const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1 }); document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el)); });
     </script>
+    <script src="/discount-popup.js" defer></script>
 </body>
 </html>
