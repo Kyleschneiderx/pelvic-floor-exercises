@@ -113,6 +113,16 @@ module.exports = async function (req, res) {
     var content = buildEmail(course);
 
     try {
+        // Save the contact first so a lead is never lost, even if sending fails.
+        // A failure here is logged but doesn't block the email.
+        var add = await sendgrid('/marketing/contacts', 'PUT', {
+            list_ids: [LIST_ID],
+            contacts: [{ email: email }]
+        });
+        if (!add.ok) {
+            console.error('SendGrid marketing/contacts failed', add.status, await add.text());
+        }
+
         var send = await sendgrid('/mail/send', 'POST', {
             personalizations: [{ to: [{ email: email }] }],
             from: FROM,
@@ -128,15 +138,6 @@ module.exports = async function (req, res) {
         if (!send.ok) {
             console.error('SendGrid mail/send failed', send.status, await send.text());
             return res.status(502).json({ error: 'We couldn\'t send your code. Please try again.' });
-        }
-
-        // Saving the contact shouldn't block the visitor if it fails.
-        var add = await sendgrid('/marketing/contacts', 'PUT', {
-            list_ids: [LIST_ID],
-            contacts: [{ email: email }]
-        });
-        if (!add.ok) {
-            console.error('SendGrid marketing/contacts failed', add.status, await add.text());
         }
 
         return res.status(200).json({ ok: true });
