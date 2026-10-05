@@ -58,7 +58,12 @@ function buildEmail(course) {
         '<table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background-color:#5AADB5;border-radius:50px;">' +
         '<a href="' + ctaUrl + '" style="display:inline-block;padding:16px 36px;color:#ffffff;font-size:16px;font-weight:700;text-decoration:none;">' + ctaLabel + ' &rarr;</a>' +
         '</td></tr></table>' +
-        (course ? '<p style="margin:16px 0 0;font-size:14px;color:#8A9BA3;">Or use it on <a href="' + SITE + '/courses/" style="color:#3D8E96;">any of my courses</a>.</p>' : '') +
+        (course
+            ? '<p style="margin:20px 0 12px;font-size:14px;color:#8A9BA3;">Your code works on any of my courses.</p>' +
+              '<table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border:2px solid #5AADB5;border-radius:50px;">' +
+              '<a href="' + SITE + '/courses/" style="display:inline-block;padding:13px 32px;color:#3D8E96;font-size:15px;font-weight:700;text-decoration:none;">Browse All Courses &rarr;</a>' +
+              '</td></tr></table>'
+            : '') +
         '</td></tr>' +
         '<tr><td style="padding:0 40px 32px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F6F9FA;border-radius:12px;"><tr><td style="padding:20px;">' +
         '<p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#1E2D33;">Sheree DiBiase, PT, PRPC, ICLM</p>' +
@@ -72,6 +77,7 @@ function buildEmail(course) {
     var text = 'Welcome! Here\'s 50% off.\n\n' +
         (course ? 'Your code for 50% off the ' + course.name + ': ' : 'Your code for 50% off any of my online courses: ') + COUPON + '\n\n' +
         ctaLabel + ': ' + ctaUrl + '\n\n' +
+        (course ? 'Your code works on any of my courses. Browse all courses: ' + SITE + '/courses/\n\n' : '') +
         'Sheree DiBiase, PT, PRPC, ICLM\nLake City Physical Therapy, Coeur d\'Alene, ID';
 
     return { html: html, text: text };
